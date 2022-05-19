@@ -15,7 +15,7 @@ class ArticleControllerTest extends TestCase
     {
         $response = $this->get(route('articles.index')); // 引数に指定されたURLへGETリクエスト
 
-        $response->assertStatus(400)  // 200であればテストに合格、200以外であればテストに不合格
+        $response->assertStatus(200)  // 200であればテストに合格、200以外であればテストに不合格
             ->assertViewIs('articles.index');
     }
 
